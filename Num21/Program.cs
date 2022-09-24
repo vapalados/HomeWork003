@@ -1,0 +1,20 @@
+﻿//Программа, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+int[] coord1 = new int[3];
+int[] coord2 = new int[3];
+Console.WriteLine("Введите X коордтинату первого числа: ");
+coord1[0] = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите Y коордтинату первого числа: ");
+coord1[1] = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите Z коордтинату первого числа: ");
+coord1[2] = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите X коордтинату второго числа: ");
+coord2[0] = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите Y коордтинату второго числа: ");
+coord2[1] = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите Z коордтинату второго числа: ");
+coord2[2] = Convert.ToInt32(Console.ReadLine());
+coord2[0] -= coord1[0];
+coord2[1] -= coord1[1];
+coord2[2] -= coord1[2];
+double dlina = Math.Sqrt(coord2[0] * coord2[0] + coord2[1] * coord2[1] + coord2[2] * coord2[2]);
+Console.WriteLine("Длина равна: " + Math.Round(dlina,2));
